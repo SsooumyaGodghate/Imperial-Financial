@@ -806,7 +806,7 @@ export default function HomePage() {
               {PARTNER_LOGOS.map((logo, idx) => (
                 <div
                   key={`bank-1-${idx}`}
-                  className="bg-white border border-slate-200/60 px-6 py-3.5 rounded-premium flex items-center justify-center min-w-[170px] h-[58px] shadow-sm grayscale opacity-65 hover:grayscale-0 hover:opacity-100 hover:scale-[1.03] transition duration-300 cursor-pointer"
+                  className="bg-white border border-slate-200/60 px-6 py-3.5 rounded-premium flex items-center justify-center min-w-[170px] h-[58px] shadow-sm hover:scale-[1.03] transition duration-300 cursor-pointer"
                 >
                   <Image
                     src={logo.path}
@@ -821,7 +821,7 @@ export default function HomePage() {
               {PARTNER_LOGOS.map((logo, idx) => (
                 <div
                   key={`bank-2-${idx}`}
-                  className="bg-white border border-slate-200/60 px-6 py-3.5 rounded-premium flex items-center justify-center min-w-[170px] h-[58px] shadow-sm grayscale opacity-65 hover:grayscale-0 hover:opacity-100 hover:scale-[1.03] transition duration-300 cursor-pointer"
+                  className="bg-white border border-slate-200/60 px-6 py-3.5 rounded-premium flex items-center justify-center min-w-[170px] h-[58px] shadow-sm hover:scale-[1.03] transition duration-300 cursor-pointer"
                 >
                   <Image
                     src={logo.path}
