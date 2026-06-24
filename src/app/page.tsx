@@ -321,11 +321,8 @@ export default function HomePage() {
             </motion.div>
           </AnimatePresence>
 
-          {/* Premium Dark Navy Overlay (45% - 60% opacity) */}
-          <div className="absolute inset-0 bg-[#06265B]/45" />
-
-          {/* Radial Light Wash Overlay specifically on the left side to guarantee readability of the dark text */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.88)_0%,rgba(255,255,255,0.6)_50%,rgba(255,255,255,0)_100%)]" />
+          {/* Premium Dark Navy Overlay (Sophisticated 50-65% opacity to support content) */}
+          <div className="absolute inset-0 bg-[#061C3F]/60" />
         </div>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
@@ -336,22 +333,22 @@ export default function HomePage() {
             transition={{ duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] }}
             className="lg:col-span-7 flex flex-col gap-6 text-left"
           >
-            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider w-fit">
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider w-fit">
               <Award className="w-4 h-4 text-gold" />
               Ravi Godghate Consultancy
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-deep leading-tight font-heading">
-              Nobody&apos;s Alone <br />
-              <span className="text-primary">with A Loan.</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight font-heading">
+              Your Trusted Partner <br />
+              <span className="text-accent">in Financial Growth.</span>
             </h1>
             
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-xl">
-              Helping individuals and businesses secure the right financing with expert guidance, fast processing, and trusted financial solutions.
+            <p className="text-slate-200 text-base md:text-lg leading-relaxed max-w-xl font-medium">
+              Expert guidance for Home Loans, Personal Loans, Loan Against Property, and tailored financing solutions.
             </p>
 
             {/* Advisor Info Badge */}
-            <div className="flex flex-wrap items-center gap-4 bg-white border border-slate-200/80 p-3 md:p-4 rounded-premium max-w-lg shadow-sm">
+            <div className="flex flex-wrap items-center gap-4 bg-white/95 border border-white/20 p-3 md:p-4 rounded-premium max-w-lg shadow-premium backdrop-blur-md">
               <div className="w-10 h-10 rounded-full relative overflow-hidden shrink-0 border border-gold shadow-sm">
                 <Image
                   src="/ravi-godghate.jpg"
@@ -378,25 +375,25 @@ export default function HomePage() {
                 href="#apply"
                 className="bg-primary hover:bg-primary-dark text-white font-semibold text-sm px-8 py-3.5 rounded-premium shadow-premium hover:shadow-premium-hover transition duration-300 flex items-center gap-2"
               >
-                Apply Now
+                Get Free Consultation
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/contact"
-                className="bg-white hover:bg-slate-50 text-deep border border-slate-200 hover:border-slate-300 font-semibold text-sm px-8 py-3.5 rounded-premium transition duration-300 flex items-center gap-2 shadow-sm"
+                className="bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-white/30 font-semibold text-sm px-8 py-3.5 rounded-premium transition duration-300 flex items-center gap-2"
               >
-                Talk To An Expert
+                Talk to an Expert
               </Link>
             </div>
 
             {/* Trust Badges */}
-            <div className="flex items-center gap-6 mt-4 text-xs text-slate-500 font-medium">
+            <div className="flex items-center gap-6 mt-4 text-xs text-slate-300 font-medium">
               <span className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4.5 h-4.5 text-emerald-500" />
+                <ShieldCheck className="w-4.5 h-4.5 text-emerald-400" />
                 Trusted Bank Partners
               </span>
               <span className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4.5 h-4.5 text-emerald-500" />
+                <ShieldCheck className="w-4.5 h-4.5 text-emerald-400" />
                 No Upfront Hidden Fees
               </span>
             </div>
@@ -416,9 +413,7 @@ export default function HomePage() {
       </section>
 
       {/* 2. STORY IN NUMBERS SECTION */}
-      <section className="relative py-20 px-4 md:px-8 bg-gradient-to-b from-slatebg to-white border-y border-slate-100 overflow-hidden">
-        {/* Decorative background grid */}
-        <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none" />
+      <section className="relative py-28 px-4 md:px-8 bg-white border-b border-slate-100 overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10 text-center flex flex-col gap-12">
           
           <motion.div 
@@ -459,7 +454,7 @@ export default function HomePage() {
                     <span className="text-3xl md:text-4xl font-extrabold text-deep tracking-tight leading-none">
                       <CountUp end={metric.end} decimals={metric.decimals} suffix={metric.suffix} />
                     </span>
-                    <span className="text-xs md:text-sm font-semibold text-slate-505 tracking-wide mt-2 block">
+                    <span className="text-xs md:text-sm font-semibold text-slate-500 tracking-wide mt-2 block">
                       {metric.label}
                     </span>
                   </div>
@@ -511,7 +506,7 @@ export default function HomePage() {
                   <h3 className="text-deep font-bold text-lg md:text-xl group-hover:text-primary transition duration-300">
                     {loan.title}
                   </h3>
-                  <p className="text-slate-655 text-sm leading-relaxed font-medium">
+                  <p className="text-slate-600 text-sm leading-relaxed font-medium">
                     {loan.description}
                   </p>
                 </div>
@@ -624,12 +619,12 @@ export default function HomePage() {
             {/* Active filled connector line for desktop */}
             <motion.div
               style={{ scaleX: timelineProgressSpring, originX: 0 }}
-              className="hidden lg:block absolute left-10 right-10 top-[24px] h-[3px] bg-gradient-to-r from-primary via-gold to-primary z-0 pointer-events-none"
+              className="hidden lg:block absolute left-10 right-10 top-[24px] h-[3px] bg-primary z-0 pointer-events-none"
             />
             {/* Active filled connector line for mobile */}
             <motion.div
               style={{ scaleY: timelineProgressSpring, originY: 0 }}
-              className="lg:hidden absolute left-1/2 -translate-x-1/2 top-6 bottom-6 w-[3px] bg-gradient-to-b from-primary via-gold to-primary z-0 pointer-events-none"
+              className="lg:hidden absolute left-1/2 -translate-x-1/2 top-6 bottom-6 w-[3px] bg-primary z-0 pointer-events-none"
             />
             
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-6 relative z-10">
@@ -643,20 +638,19 @@ export default function HomePage() {
                     {/* Glowing step bubble with scroll entering highlighting */}
                     <motion.div
                       variants={{
-                        inactive: { scale: 1, backgroundColor: "#0b3e91", borderColor: "rgba(212, 175, 55, 0.4)", color: "#ffffff" },
+                        inactive: { scale: 1, backgroundColor: "#ffffff", borderColor: "#E2E8F0", color: "#94A3B8" },
                         active: { 
-                          scale: 1.15, 
+                          scale: 1, 
                           backgroundColor: "#0056D6", 
-                          borderColor: "rgba(212, 175, 55, 1)", 
-                          color: "#ffffff",
-                          boxShadow: "0 0 15px rgba(212, 175, 55, 0.6)" 
+                          borderColor: "#0056D6", 
+                          color: "#ffffff"
                         }
                       }}
                       initial="inactive"
                       whileInView="active"
                       viewport={{ once: false, amount: 0.6 }}
                       transition={{ duration: 0.3 }}
-                      className="w-12 h-12 rounded-full border-2 flex items-center justify-center font-bold text-sm shadow-premium z-10 mb-6 font-mono shrink-0 cursor-pointer"
+                      className="w-12 h-12 rounded-full border-2 flex items-center justify-center font-bold text-sm z-10 mb-6 font-mono shrink-0 cursor-pointer"
                     >
                       {item.step}
                     </motion.div>
@@ -666,10 +660,10 @@ export default function HomePage() {
                       variants={{
                         inactive: { y: 0, opacity: 0.9, borderColor: "rgba(226, 232, 240, 0.75)" },
                         active: { 
-                          y: -6, 
+                          y: -2, 
                           opacity: 1, 
-                          borderColor: "rgba(212, 175, 55, 0.45)",
-                          boxShadow: "0 12px 30px 0 rgba(11, 62, 145, 0.06), 0 8px 12px 0 rgba(212, 175, 55, 0.03)" 
+                          borderColor: "rgba(0, 86, 214, 0.3)",
+                          boxShadow: "0 10px 25px -4px rgba(11, 62, 145, 0.05)" 
                         }
                       }}
                       initial="inactive"
@@ -824,7 +818,7 @@ export default function HomePage() {
             <h2 className="text-2xl md:text-3xl font-bold text-deep tracking-tight font-heading">
               Our Lending Partners
             </h2>
-            <p className="text-slate-550 text-xs md:text-sm font-semibold">
+            <p className="text-slate-500 text-xs md:text-sm font-semibold">
               We compare rates and present files matching specific underwriting policies for fast sanctions.
             </p>
           </motion.div>
@@ -868,7 +862,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <p className="text-center text-slate-450 text-xs font-semibold">
+          <p className="text-center text-slate-400 text-xs font-semibold">
             We submit files matching specific partner criteria to secure rapid underwriting and minimal queries.
           </p>
         </div>
@@ -969,7 +963,7 @@ export default function HomePage() {
                     />
                   </button>
                   {isOpen && (
-                    <div className="bg-slatebg/80 border-t border-slate-100 px-6 py-4.5 text-slate-655 text-sm leading-relaxed text-left animate-in fade-in slide-in-from-top-1 font-medium">
+                    <div className="bg-slatebg/80 border-t border-slate-100 px-6 py-4.5 text-slate-600 text-sm leading-relaxed text-left animate-in fade-in slide-in-from-top-1 font-medium">
                       {faq.a}
                     </div>
                   )}

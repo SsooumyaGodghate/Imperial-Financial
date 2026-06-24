@@ -43,6 +43,10 @@ export default {
         'premium': '0 4px 20px -2px rgba(11, 62, 145, 0.05), 0 2px 8px -1px rgba(0, 86, 214, 0.03)',
         'premium-hover': '0 12px 30px -4px rgba(11, 62, 145, 0.1), 0 4px 12px -2px rgba(0, 86, 214, 0.05)',
         'glass': '0 8px 32px 0 rgba(11, 62, 145, 0.06)',
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)", "sans-serif"],
+        heading: ["var(--font-jakarta)", "sans-serif"],
       }
     },
   },

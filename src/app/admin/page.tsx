@@ -428,7 +428,7 @@ export default function AdminPage() {
             className={`flex items-center gap-2 px-6 py-2 rounded-premium-sm text-xs font-bold transition ${
               activeTab === 'leads'
                 ? 'bg-primary text-white shadow-sm'
-                : 'text-slate-650 hover:bg-slate-50'
+                : 'text-slate-600 hover:bg-slate-50'
             }`}
           >
             <ClipboardList className="w-4 h-4" />
@@ -439,7 +439,7 @@ export default function AdminPage() {
             className={`flex items-center gap-2 px-6 py-2 rounded-premium-sm text-xs font-bold transition ${
               activeTab === 'logs'
                 ? 'bg-primary text-white shadow-sm'
-                : 'text-slate-650 hover:bg-slate-50'
+                : 'text-slate-600 hover:bg-slate-50'
             }`}
           >
             <ShieldAlert className="w-4 h-4" />
@@ -672,7 +672,7 @@ export default function AdminPage() {
                                 <div className="flex gap-1.5 self-end">
                                   <button
                                     onClick={() => setEditingNotesId(null)}
-                                    className="text-[9px] font-bold text-slate-550 border border-slate-200 px-2 py-0.5 rounded hover:bg-slate-50"
+                                    className="text-[9px] font-bold text-slate-500 border border-slate-200 px-2 py-0.5 rounded hover:bg-slate-50"
                                   >
                                     Cancel
                                   </button>

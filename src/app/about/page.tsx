@@ -182,7 +182,7 @@ export default function AboutPage() {
               Meet Our Founder & Director
             </h2>
             <div className="h-1 w-20 bg-gold rounded-full" />
-            <p className="text-slate-650 text-sm md:text-base leading-relaxed">
+            <p className="text-slate-600 text-sm md:text-base leading-relaxed">
               With over <strong>22 years of financial advisory experience</strong>, Ravi Godghate has helped hundreds of individuals, professionals, and corporate entities secure optimal financing. His deep understanding of bank credit policies and personal commitment to client success form the cornerstone of Imperial Financial.
             </p>
             <blockquote className="border-l-4 border-primary pl-4 italic text-slate-500 text-xs md:text-sm my-2 font-medium">
@@ -220,7 +220,7 @@ export default function AboutPage() {
             </h2>
             <div className="flex flex-col gap-4 mt-2">
               {trustFactors.map((factor, i) => (
-                <div key={i} className="flex items-start gap-3 text-slate-650 text-sm font-semibold leading-relaxed">
+                <div key={i} className="flex items-start gap-3 text-slate-600 text-sm font-semibold leading-relaxed">
                   <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
                   <span>{factor}</span>
                 </div>

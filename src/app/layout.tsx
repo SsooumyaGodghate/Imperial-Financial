@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Outfit, Inter } from 'next/font/google';
+import { Plus_Jakarta_Sans, Inter } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
@@ -7,10 +7,10 @@ import SmoothScroll from '@/components/SmoothScroll';
 import './globals.css';
 
 // Highly premium typography pairing
-const outfit = Outfit({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  variable: '--font-outfit',
-  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-jakarta',
+  weight: ['400', '500', '600', '700', '800'],
   display: 'swap',
 });
 
@@ -67,7 +67,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${inter.variable}`}>
+    <html lang="en" className={`${plusJakartaSans.variable} ${inter.variable}`}>
       <body className="font-sans bg-white text-slate-900 flex flex-col min-h-screen antialiased">
         <SmoothScroll />
         <Navbar />

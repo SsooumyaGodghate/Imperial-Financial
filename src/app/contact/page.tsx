@@ -85,7 +85,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xs text-slate-400 font-bold uppercase">Office Address</span>
-                  <p className="text-sm text-slate-650 font-semibold leading-relaxed mt-0.5 text-left">
+                  <p className="text-sm text-slate-600 font-semibold leading-relaxed mt-0.5 text-left">
                     302, 3rd floor, B-Wing, Lokmat building, Nagpur, Maharashtra
                   </p>
                 </div>
@@ -98,7 +98,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xs text-slate-400 font-bold uppercase">Consultation Hours</span>
-                  <p className="text-sm text-slate-650 font-bold mt-0.5">
+                  <p className="text-sm text-slate-600 font-bold mt-0.5">
                     Mon – Sat: 09:30 AM to 07:00 PM
                   </p>
                 </div>
@@ -107,7 +107,7 @@ export default function ContactPage() {
             </div>
 
             {/* Shield info */}
-            <div className="flex items-center gap-2.5 text-xs text-slate-500 font-semibold bg-white border border-slate-150 p-4 rounded-premium shadow-sm text-left">
+            <div className="flex items-center gap-2.5 text-xs text-slate-500 font-semibold bg-white border border-slate-200 p-4 rounded-premium shadow-sm text-left">
               <ShieldCheck className="w-4.5 h-4.5 text-emerald-500 shrink-0" />
               <span>Lead verification runs under secure 256-bit encryption. Safe financial practices guaranteed.</span>
             </div>

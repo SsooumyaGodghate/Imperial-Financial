@@ -60,29 +60,26 @@ body {
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(226, 232, 240, 0.75);
-  box-shadow: 0 8px 32px 0 rgba(11, 62, 145, 0.03);
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.02), 0 2px 8px -1px rgba(15, 23, 42, 0.01);
 }
 
 .glass-card-navy {
-  background: rgba(11, 62, 145, 0.04);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(11, 62, 145, 0.06);
-  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.05), 0 8px 32px 0 rgba(0, 0, 0, 0.02);
+  background: rgba(11, 62, 145, 0.02);
+  border: 1px solid rgba(11, 62, 145, 0.04);
+  box-shadow: 0 4px 20px -2px rgba(11, 62, 145, 0.01);
 }
 
-/* Premium Gold glow hover effect */
+/* Premium clean hover transition effect */
 .hover-gold-glow {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-gold-glow:hover {
-  border-color: rgba(212, 175, 55, 0.4);
-  box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.1), 0 8px 10px -6px rgba(212, 175, 55, 0.05);
+  border-color: #e2e8f0;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px rgba(15, 23, 42, 0.04), 0 4px 12px -5px rgba(15, 23, 42, 0.02);
 }
 
 /* Infinite marquee scroll-left keyframes */
