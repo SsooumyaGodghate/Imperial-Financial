@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion, useScroll, useSpring, useTransform, Variants } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useSpring, Variants } from 'framer-motion';
 
 import {
   ChevronDown,
@@ -121,15 +121,26 @@ const staggerContainer = {
   }
 };
 
+const HERO_IMAGES = [
+  '/hero/home-loan.jpg',
+  '/hero/consultation.jpg',
+  '/hero/family-home.jpg',
+  '/hero/personal-loan.jpg',
+  '/hero/business-growth.jpg',
+];
+
 export default function HomePage() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
+  const [heroIndex, setHeroIndex] = useState(0);
 
-  // Parallax background variables
-  const { scrollY } = useScroll();
-  const y1 = useTransform(scrollY, [0, 1000], [0, 200]);
-  const y2 = useTransform(scrollY, [0, 1000], [0, -150]);
-  const scaleBg = useTransform(scrollY, [0, 1000], [1, 1.15]);
-  const opacityBg = useTransform(scrollY, [0, 1000], [0.6, 0.25]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHeroIndex((prev) => (prev + 1) % HERO_IMAGES.length);
+    }, 7000);
+    return () => clearInterval(interval);
+  }, []);
+
+
 
   // Timeline section tracking
   const timelineRef = useRef<HTMLDivElement>(null);
@@ -281,19 +292,41 @@ export default function HomePage() {
       
       {/* 1. HERO SECTION */}
       <section className="relative bg-gradient-to-b from-deep-light/45 via-white to-white py-16 md:py-24 px-4 md:px-8 border-b border-slate-100 overflow-hidden">
-        {/* Floating background blur gradients with scroll parallax */}
-        <motion.div 
-          style={{ y: y1, scale: scaleBg, opacity: opacityBg }}
-          className="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-gradient-to-tr from-primary/10 to-gold/10 blur-[80px] pointer-events-none z-0"
-        />
-        <motion.div 
-          style={{ y: y2, scale: scaleBg, opacity: opacityBg }}
-          className="absolute top-60 -right-20 w-80 h-80 rounded-full bg-gradient-to-bl from-gold/15 to-primary/5 blur-[70px] pointer-events-none z-0"
-        />
-        <motion.div 
-          style={{ y: y1, scale: scaleBg, opacity: opacityBg }}
-          className="absolute bottom-10 left-1/3 w-64 h-64 rounded-full bg-primary/5 blur-[60px] pointer-events-none z-0"
-        />
+        {/* Background Slideshow Container */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden z-0 select-none pointer-events-none">
+          <AnimatePresence mode="popLayout">
+            <motion.div
+              key={heroIndex}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+              className="absolute inset-0 w-full h-full"
+            >
+              <motion.div
+                initial={{ scale: 1 }}
+                animate={{ scale: 1.08 }}
+                transition={{ duration: 7.5, ease: "linear" }}
+                className="relative w-full h-full"
+              >
+                <Image
+                  src={HERO_IMAGES[heroIndex]}
+                  alt="Imperial Financial Background"
+                  fill
+                  priority={heroIndex === 0}
+                  sizes="100vw"
+                  className="object-cover"
+                />
+              </motion.div>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Premium Dark Navy Overlay (45% - 60% opacity) */}
+          <div className="absolute inset-0 bg-[#06265B]/45" />
+
+          {/* Radial Light Wash Overlay specifically on the left side to guarantee readability of the dark text */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.88)_0%,rgba(255,255,255,0.6)_50%,rgba(255,255,255,0)_100%)]" />
+        </div>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
           {/* Hero text content */}
