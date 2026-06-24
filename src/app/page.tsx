@@ -363,8 +363,8 @@ export default function HomePage() {
               </div>
               <div className="ml-auto flex flex-col items-end border-l border-slate-200 pl-4">
                 <span className="text-[10px] text-slate-400 font-bold uppercase">Direct Support</span>
-                <a href="tel:+919890212456" className="text-sm font-bold text-primary hover:underline">
-                  +91 9890212456
+                <a href="tel:+918408090022" className="text-sm font-bold text-primary hover:underline">
+                  +91 8408090022
                 </a>
               </div>
             </div>

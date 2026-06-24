@@ -306,8 +306,8 @@ export default function ServicesPage() {
                   </div>
                   <div className="flex flex-col text-left">
                     <span className="text-xs text-slate-400 font-bold uppercase">Consultation Call</span>
-                    <a href="tel:+919890212456" className="text-sm font-bold text-deep hover:underline">
-                      +91 9890212456
+                    <a href="tel:+918408090022" className="text-sm font-bold text-deep hover:underline">
+                      +91 8408090022
                     </a>
                   </div>
                 </div>

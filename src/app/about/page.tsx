@@ -209,7 +209,7 @@ export default function AboutPage() {
             </p>
             <div className="border-t border-white/10 pt-4 mt-2">
               <span className="text-gold font-bold text-xs uppercase tracking-wider block">Lead Advisor Assurance</span>
-              <span className="text-xs text-white/95 mt-1 font-semibold block">Ravi Godghate — +91 9890212456</span>
+              <span className="text-xs text-white/95 mt-1 font-semibold block">Ravi Godghate — +91 8408090022</span>
             </div>
           </div>
 
