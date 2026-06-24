@@ -17,16 +17,16 @@ export default function Footer() {
               <Image
                 src="/logo.jpeg"
                 alt="Imperial Financial Logo"
-                width={40}
-                height={40}
+                width={46}
+                height={46}
                 className="object-contain"
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-md font-bold tracking-tight text-deep leading-none">
+              <span className="text-xl font-bold tracking-tight text-deep leading-none">
                 Imperial
               </span>
-              <span className="text-[9px] font-semibold text-gold tracking-widest leading-none mt-1">
+              <span className="text-[11px] font-bold text-gold tracking-widest leading-none mt-1 uppercase">
                 Financial
               </span>
             </div>
