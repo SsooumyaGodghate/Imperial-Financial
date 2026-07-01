@@ -72,8 +72,8 @@ export default function ContactPage() {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xs text-slate-400 font-bold uppercase">Email Support</span>
-                  <a href="mailto:ravigodghate76@gmail.com" className="text-sm font-bold text-deep hover:underline mt-0.5">
-                    ravigodghate76@gmail.com
+                  <a href="mailto:ravi@theimperialfinancial.com" className="text-sm font-bold text-deep hover:underline mt-0.5">
+                    ravi@theimperialfinancial.com
                   </a>
                 </div>
               </div>
