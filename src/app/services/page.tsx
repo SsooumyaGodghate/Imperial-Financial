@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   CheckCircle2,
   FileText,
@@ -167,6 +167,24 @@ const SERVICES = [
 
 export default function ServicesPage() {
   const [selectedService, setSelectedService] = useState(SERVICES[0]);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const id = hash.replace('#', '');
+        const match = SERVICES.find((s) => s.id === id);
+        if (match) {
+          setSelectedService(match);
+        }
+      }
+    };
+
+    handleHashChange();
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   return (
     <div className="bg-slatebg min-h-screen py-12 px-4 md:px-8">

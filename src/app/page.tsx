@@ -510,10 +510,13 @@ export default function HomePage() {
                     {loan.description}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-bold text-primary group-hover:text-deep transition duration-300">
+                <Link
+                  href={loan.link}
+                  className="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-bold text-primary group-hover:text-deep transition duration-300 cursor-pointer"
+                >
                   <span>View Details</span>
                   <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </div>
+                </Link>
               </motion.div>
             ))}
           </motion.div>
