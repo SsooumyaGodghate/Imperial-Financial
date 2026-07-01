@@ -70,10 +70,13 @@ export default function ContactPage() {
                 <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
                   <Mail className="w-5 h-5" />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col text-left">
                   <span className="text-xs text-slate-400 font-bold uppercase">Email Support</span>
-                  <a href="mailto:ravi@theimperialfinancial.com" className="text-sm font-bold text-deep hover:underline mt-0.5">
-                    ravi@theimperialfinancial.com
+                  <a href="mailto:support@theimperialfinancial.com" className="text-sm font-bold text-deep hover:underline mt-0.5">
+                    support@theimperialfinancial.com
+                  </a>
+                  <a href="mailto:ravi@theimperialfinancial.com" className="text-xs font-semibold text-slate-500 hover:underline">
+                    ravi@theimperialfinancial.com (Direct Advisor)
                   </a>
                 </div>
               </div>

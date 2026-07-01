@@ -109,10 +109,15 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <Mail className="w-4 h-4 text-gold shrink-0" />
-              <a href="mailto:ravi@theimperialfinancial.com" className="hover:text-primary transition-colors">
-                ravi@theimperialfinancial.com
-              </a>
+              <Mail className="w-4 h-4 text-gold shrink-0 mt-1 self-start" />
+              <div className="flex flex-col text-left">
+                <a href="mailto:support@theimperialfinancial.com" className="hover:text-primary transition-colors">
+                  support@theimperialfinancial.com
+                </a>
+                <a href="mailto:ravi@theimperialfinancial.com" className="hover:text-primary transition-colors text-xs opacity-80 mt-0.5">
+                  ravi@theimperialfinancial.com
+                </a>
+              </div>
             </div>
             <div className="text-xs border-t border-slate-200/60 pt-3 mt-1">
               <span className="text-slate-500">Adviser:</span> <strong className="text-deep">Ravi Godghate</strong>
